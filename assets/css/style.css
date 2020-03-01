@@ -1,0 +1,70 @@
+.auto-center {
+    margin: 0 auto;
+}
+
+.container1 {
+    width: 70%;
+}
+
+.container {
+    width: 100%;
+    margin: 20px;
+    padding: 0px 0 20px 0px;
+}
+
+table {
+    width:100%;
+
+}
+
+.tr-format {
+    padding-left: 20px;
+    
+}
+
+.td-format {
+   
+}
+
+.section-format {
+    margin: 20px;
+}
+
+h1 {
+    text-align:center;
+}
+
+h4 {
+    text-align:center;
+}
+
+.outline1 {
+    border: 1px solid brown;
+    border-radius: 0px 0px 30px 30px;
+}
+
+.outline {
+    border: 1px solid blue;
+    border-radius: 0px 0px 30px 30px;
+}
+
+.title1 {
+    background-color: brown;
+    color: white;
+}
+
+.title2 {
+    background-color: blue;
+    color: white;
+    padding-left: 20px;
+}
+
+.input-format {
+    width:100%;
+    padding: 10px 0 0 5px;
+}
+
+#submit {
+    border-radius: 5px;
+    margin-top: 20px;
+}
