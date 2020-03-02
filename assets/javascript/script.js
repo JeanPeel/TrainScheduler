@@ -22,8 +22,9 @@ $("#submit").on("click", function (event){
     var destinationInput = $("#destination").val().trim();
     var firstTrainTime = $("#first-train-time").val().trim();
     var frequencyInput = $("#frequency").val().trim();
+    var descriptionInput = $("#description").val().trim();
     
-    console.log(trainName + " | " + destinationInput + " | " + firstTrainTime + " | " + frequencyInput);
+    console.log(trainName + " | " + destinationInput + " | " + firstTrainTime + " | " + frequencyInput + " | " + descriptionInput);
     
     // Creates local "temporary object for holding the train schedule"
 
@@ -31,7 +32,8 @@ $("#submit").on("click", function (event){
         train: trainName,
         destination: destinationInput,
         firsTrain: firstTrainTime,
-        frequency: frequencyInput
+        frequency: frequencyInput,
+        description: descriptionInput
     };
 
     console.log(newTrain);
