@@ -52,15 +52,72 @@ $("#submit").on("click", function (event){
     console.log(newTrain.frequency);
     console.log(newTrain.description);
 
-    console.log("New Train's Information Pushed to Database");
+    alert("New Train's Information Added");
 
     // clear all the text boxes
 
-    $(tripClass).val("");
-    $(trainName).val("");
-    $(destinationInput).val("");
-    $(firstTrainTime).val("");
-    $(frequencyInput).val("");
-    $(descriptionInput).val("");
+    $(tripClass).val("")
+    $(trainName).val("")
+    $(destinationInput).val("")
+    $(firstTrainTime).val("")
+    $(frequencyInput).val("")
+    $(descriptionInput).val("")
 
-})
+});
+
+// Creates a Fbase event for adding 
+// the New Train Schedule to the databse
+// when user adds an entry
+
+database.ref().on("child_added",function(childsnapshot){
+    console.log(childsnapshot.val());
+
+    // store information in a value
+
+    var storeTripClass = childsnapshot.val().classification;
+    var storeTrainName = childsnapshot.val().train;
+    var storeDestination = childsnapshot.val().destination;
+    var storeFirstDeparture = childsnapshot.val().firstTrain;
+    var storeFrequency = childsnapshot.val().frequency;
+    var storeDescription = childsnapshot.val().description;
+
+    // input for Minutes Away
+
+    var firstTrainNew = moment(childsnapshot.val().firsttrain, "hh:mm")
+    var diffTime = moment().diff(moment(firstTrainNew),"minutes");
+    var reminder = diffTime.childsnapshot.val().frequency - remainder;
+
+    // Log train time
+
+    console.log(trainName);
+    console.log(destinationInput);
+    console.log(firstTrainTime);
+    console.log(frequencyInput);
+
+    // create HTML to post on page with train information
+
+    var newTrainInfo = $("<div>").apend(
+        $("<table>").apend(
+            $("<tbody>").apend(
+                $("<tr>").apend(
+                    $("<td>").text(classification),
+                    $("<td>").text(train),			
+                    $("<td>").text(destination),
+                    $("<td>").text(frequency),
+                    $("<td>").text(firstTrain),
+                    $("<td>").text(minsAway),
+        )	
+            )
+                )
+        $("<table>").apend(
+            $("<tbody>").apend(
+                $("<tr>").apend(
+                    $("<td>").text(description),
+        )
+            )
+                )		
+    );
+
+    $("#train-schedule").apend(newTrainInfo);
+
+});
