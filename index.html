@@ -10,6 +10,13 @@
     <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'
         integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' crossorigin='anonymous'>
 
+    <!-- Firebase References -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+
+    <!-- Moment.js Reference -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+    
     <!-- Linked Style Sheet & Reset etc.-->
     <link rel='meyer-reset' type='reset' href='assets/css/reset.css'>
     <link rel='stylesheet' href='assets/css/style.css'>
@@ -39,27 +46,38 @@
                             <th scope="col">Next Arrival</th>
                             <th scope="col">Minutes Away</th>
                         </tr>
-
                     </thead>
-                    <tbody>
-
-                    </tbody>
                 </table>
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="row" class="title3">Description</th>
+                        </tr>
+                    </thead>
+                </table>
+                    
+                <section id="train-schedule">
+
+                </section>
+                
             </div>
         </section>
         <section class='container outline'>
             <h2 class="title2">Add a Train</h2>
             <section class="section-format">
                 <form id="form-input">
-                    <label for="train-name" class="input-format" >Train Name</label>
+                    <label for="train-name" class="input-format">Train Name</label>
                     <input type="text" id="train-name" class="input-format" placeholder="Enter Train Name Here"><br>
-                    <label for="destination" class="input-format" >Destination</label>
+                    <label for="destination" class="input-format">Destination</label>
                     <input type="text" id="destination" class="input-format" placeholder="Enter Destination Here"><br>
-                    <label for="first-train-time" class="input-format" >First Train Departure Time (HH:mm - military time)</label>
-                    <input type="text" id="first-train-time" class="input-format" placeholder="Enter Departure Time of the First Train"><br>
-                    <label for="frequency" class="input-format" >Frequency (min)</label>
-                    <input type="text" id="frequency" class="input-format" placeholder="Enter Frequency of Trains in Minutes Here."><br>
-                    <button id="submit" >Submit</button>
+                    <label for="first-train-time" class="input-format">First Train Departure Time (HH:mm - military
+                        time)</label>
+                    <input type="text" id="first-train-time" class="input-format"
+                        placeholder="Enter Departure Time of the First Train"><br>
+                    <label for="frequency" class="input-format">Frequency (min)</label>
+                    <input type="text" id="frequency" class="input-format"
+                        placeholder="Enter Frequency of Trains in Minutes Here."><br>
+                    <button id="submit">Submit</button>
                 </form>
             </section>
         </section>
@@ -80,7 +98,7 @@
         crossorigin='anonymous'></script>
 
     <!--Script App Inserted etc.-->
-    <script src='assets/javascript/app.js'></script>
+    <script src='assets/javascript/script.js'></script>
 
 </body>
 
