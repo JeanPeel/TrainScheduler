@@ -97,5 +97,6 @@ database.ref().on("child_added",function(childsnapshot){
     }
 
     newTrainTable ();
-
+    // I am getting two trains showing for every one record
+    // I don't know why it is doubling 
 });
