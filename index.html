@@ -40,11 +40,13 @@
                 <table id="train-schedule">
 
                     <thead>
-                        <th scope="col">Class</th>
-                        <th scope="col">Train Route</th>
+                        <!-- <th scope="col">Class</th> -->
+                        <th scope="col">Next Train Route</th>
                         <th scope="col">Destination</th>
-                        <th scope="col">Depart Time</th>
-                        <th scope="col">Frequency</th>
+                        <!-- <th scope="col">First Train Time</th> -->
+                        <!-- <th scope="col">Frequency</th> -->
+                        <th scope="col">Time</th>
+                        <th scope="col">Minuets away</th>
                         <th scope="col">Description</th>
                     </thead>
                     <tr>
@@ -59,8 +61,8 @@
             <h2 class="title2">Add a Train</h2>
             <section class="section-format">
                 <form id="form-input">
-                    <label for="trip-class" class="input-format">Trip Class</label>
-                    <input type="text" id="trip-class" class="input-format" placeholder="Enter Trip Class Here"><br>
+                    <!-- <label for="trip-class" class="input-format">Trip Class</label>
+                    <input type="text" id="trip-class" class="input-format" placeholder="Enter Trip Class Here"><br> -->
                     <label for="train-name" class="input-format">Train Name</label>
                     <input type="text" id="train-name" class="input-format" placeholder="Enter Train Name Here"><br>
                     <label for="destination" class="input-format">Destination</label>
@@ -73,9 +75,9 @@
                     <input type="text" id="frequency" class="input-format"
                         placeholder="Enter Frequency of Trains in Minutes Here."><br>
                     <label for="description" class="input-format">Description</label>
-                    <input type="text" id="description" class="input-format"
+                    <input type="text" id="description" class="input-format" 
                         placeholder="Description of Destination"><br>
-                    <button id="submit">Submit</button>
+                    <button id="submit">Submit</button> 
                 </form>
             </section>
         </section>
