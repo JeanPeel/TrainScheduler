@@ -6,6 +6,8 @@ var config = {
     databaseURL : "https://train-scheduler-cd22f.firebaseio.com/"
 };
 
+var numberOfTrains = 0
+
 firebase.initializeApp(config);
 var database = firebase.database();
 
@@ -34,14 +36,12 @@ $("#submit").on("click", function (event){
         description: descriptionInput
     };
 
-    // uploads Scheduled Train to FBase
-    database.ref().push(newTrain);
-
-    // Alerts that train info is added
-    alert("New Train's Information Added");
-
-    // clear all the text boxes
-
+     // uploads Scheduled Train to FBase
+   console.log(numberOfTrains, "before new train table")
+   database.ref().push(newTrain);
+   numberOfTrains++
+   console.log(numberOfTrains, "after new train table")
+   
     // $("#trip-class").val("")
     $("#destination").val("")
     $("#first-train-time").val("")
